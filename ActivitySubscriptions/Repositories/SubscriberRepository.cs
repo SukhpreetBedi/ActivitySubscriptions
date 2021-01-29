@@ -51,7 +51,6 @@ namespace ActivitySubscriptions.Repositories
 
         public async Task<int> DeleteActivity(int activityId)
         {
-            //Also needs update to remove correspinding Subscriber
             int result = 0;
 
             if (_activitySubscriptionsContext != null)
@@ -76,7 +75,6 @@ namespace ActivitySubscriptions.Repositories
 
         public async Task<int> DeleteSubscriber(int subscriberId)
         {
-            //Also needs update to remove correspinding Subscriber
             int result = 0;
 
             if (_activitySubscriptionsContext != null)
