@@ -158,7 +158,7 @@ namespace ActivitySubscriptions.Repositories
         {
             if (_activitySubscriptionsContext != null)
             {
-                //Delete that subscriber
+                //Update that subscriber
                 _activitySubscriptionsContext.Activities.Update(activity);
 
                 //Commit the transaction
@@ -171,7 +171,7 @@ namespace ActivitySubscriptions.Repositories
         {
             if (_activitySubscriptionsContext != null)
             {
-                //Delete that subscriber
+                //Update that subscriber
                 _activitySubscriptionsContext.Subscribers.Update(subscriber);
 
                 //Commit the transaction
