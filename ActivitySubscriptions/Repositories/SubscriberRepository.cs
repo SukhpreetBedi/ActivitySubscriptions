@@ -56,12 +56,12 @@ namespace ActivitySubscriptions.Repositories
 
             if (_activitySubscriptionsContext != null)
             {
-                //Find the post for specific post id
+                //Find the activity for specific activity id
                 var activity = await _activitySubscriptionsContext.Activities.FirstOrDefaultAsync(x => x.Id == activityId);
 
                 if (activity != null)
                 {
-                    //Delete that post
+                    //Delete that subscriber
                     _activitySubscriptionsContext.Activities.Remove(activity);
 
                     //Commit the transaction
@@ -81,12 +81,12 @@ namespace ActivitySubscriptions.Repositories
 
             if (_activitySubscriptionsContext != null)
             {
-                //Find the post for specific post id
+                //Find the subscriber for specific id
                 var subscriber = await _activitySubscriptionsContext.Subscribers.FirstOrDefaultAsync(x => x.Id == subscriberId);
 
                 if (subscriber != null)
                 {
-                    //Delete that post
+                    //Delete that subscriber
                     _activitySubscriptionsContext.Subscribers.Remove(subscriber);
 
                     //Commit the transaction
@@ -159,7 +159,7 @@ namespace ActivitySubscriptions.Repositories
         {
             if (_activitySubscriptionsContext != null)
             {
-                //Delete that post
+                //Delete that subscriber
                 _activitySubscriptionsContext.Activities.Update(activity);
 
                 //Commit the transaction
@@ -172,7 +172,7 @@ namespace ActivitySubscriptions.Repositories
         {
             if (_activitySubscriptionsContext != null)
             {
-                //Delete that post
+                //Delete that subscriber
                 _activitySubscriptionsContext.Subscribers.Update(subscriber);
 
                 //Commit the transaction
