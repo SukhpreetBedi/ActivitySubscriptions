@@ -51,6 +51,7 @@ namespace ActivitySubscriptions.Repositories
 
         public async Task<int> DeleteActivity(int activityId)
         {
+        // Would need to delete corresponding subscribers
             int result = 0;
 
             if (_activitySubscriptionsContext != null)
